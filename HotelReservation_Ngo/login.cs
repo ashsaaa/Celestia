@@ -1,9 +1,11 @@
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace HotelReservation_Ngo
 {
     public partial class login : Form
     {
+
         public login()
         {
             InitializeComponent();
@@ -47,6 +49,7 @@ namespace HotelReservation_Ngo
         {
             if (passtxt.Text == "Password")
             {
+                toggle1.Visible = true;
                 passtxt.Text = string.Empty;
             }
         }
@@ -64,11 +67,18 @@ namespace HotelReservation_Ngo
             if (passtxt.Text != "Password")
             {
                 passtxt.PasswordChar = '*';
+                TogglePassView();
             }
             else
             {
+                toggle1.Visible = false;
                 passtxt.PasswordChar = '\0';
             }
+        }
+
+        public bool NewLogin()
+        {
+            return !toggle.Checked;
         }
 
         private void loginbtn_Click(object sender, EventArgs e)
@@ -82,10 +92,11 @@ namespace HotelReservation_Ngo
             {
                 this.Hide();
 
-                // Open the IndexForm
-                index index = new index();
-                index.WindowState = FormWindowState.Maximized;
-                index.Show();
+                this.Hide();
+
+                index indexForm = new(this);
+                indexForm.WindowState = FormWindowState.Maximized;
+                indexForm.Show();
             }
             else
             {
@@ -119,6 +130,32 @@ namespace HotelReservation_Ngo
                     Console.WriteLine("Error: " + ex.Message);
                     return false;
                 }
+            }
+        }
+
+        private void toggle1_Click(object sender, EventArgs e)
+        {
+            TogglePassView();
+        }
+
+        private void toggle1_CheckedChanged(object sender, EventArgs e)
+        {
+            TogglePassView();
+        }
+
+        private void TogglePassView()
+        {
+            if (toggle1.Checked)
+            {
+                // Show password characters in passtxt
+                passtxt.PasswordChar = '\0';
+                toggle1.Image = Properties.Resources.hidename; // Show hide image
+            }
+            else
+            {
+                // Hide password characters in passtxt
+                passtxt.PasswordChar = '*';
+                toggle1.Image = Properties.Resources.view; // Show view image
             }
         }
     }

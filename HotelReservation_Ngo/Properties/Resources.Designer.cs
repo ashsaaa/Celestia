@@ -93,6 +93,16 @@ namespace HotelReservation_Ngo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hidename {
+            get {
+                object obj = ResourceManager.GetObject("hidename", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logout__2_ {
             get {
                 object obj = ResourceManager.GetObject("logout (2)", resourceCulture);
@@ -106,6 +116,16 @@ namespace HotelReservation_Ngo.Properties {
         internal static System.Drawing.Bitmap rating {
             get {
                 object obj = ResourceManager.GetObject("rating", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap view {
+            get {
+                object obj = ResourceManager.GetObject("view", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

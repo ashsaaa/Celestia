@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             splitContainer1 = new SplitContainer();
+            toggle1 = new CheckBox();
             passtxt = new TextBox();
             label2 = new Label();
             usertxt = new TextBox();
@@ -61,6 +62,8 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.BackColor = Color.White;
+            splitContainer1.Panel2.BackgroundImageLayout = ImageLayout.Stretch;
+            splitContainer1.Panel2.Controls.Add(toggle1);
             splitContainer1.Panel2.Controls.Add(passtxt);
             splitContainer1.Panel2.Controls.Add(label2);
             splitContainer1.Panel2.Controls.Add(usertxt);
@@ -73,10 +76,28 @@
             splitContainer1.SplitterDistance = 259;
             splitContainer1.TabIndex = 0;
             // 
+            // toggle1
+            // 
+            toggle1.Appearance = Appearance.Button;
+            toggle1.AutoSize = true;
+            toggle1.BackgroundImageLayout = ImageLayout.None;
+            toggle1.CheckAlign = ContentAlignment.MiddleCenter;
+            toggle1.FlatStyle = FlatStyle.Flat;
+            toggle1.Image = Properties.Resources.view;
+            toggle1.Location = new Point(377, 216);
+            toggle1.Name = "toggle1";
+            toggle1.Size = new Size(22, 22);
+            toggle1.TabIndex = 7;
+            toggle1.UseVisualStyleBackColor = true;
+            toggle1.Visible = false;
+            toggle1.CheckedChanged += toggle1_CheckedChanged;
+            toggle1.Click += toggle1_Click;
+            // 
             // passtxt
             // 
             passtxt.BackColor = Color.White;
             passtxt.Font = new Font("Segoe UI Light", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            passtxt.HideSelection = false;
             passtxt.Location = new Point(118, 212);
             passtxt.Margin = new Padding(0);
             passtxt.Name = "passtxt";
@@ -207,5 +228,6 @@
         private Button loginbtn;
         private CheckBox toggle;
         private Label extbtn;
+        private CheckBox toggle1;
     }
 }

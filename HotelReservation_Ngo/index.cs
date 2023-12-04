@@ -12,10 +12,13 @@ namespace HotelReservation_Ngo
 {
     public partial class index : Form
     {
-        public index()
+        private login loginForm;
+
+        public index(login loginForm)
         {
             InitializeComponent();
             setcolor();
+            this.loginForm = loginForm;
         }
 
         private void setcolor()
@@ -39,5 +42,20 @@ namespace HotelReservation_Ngo
             btnLogout.FlatAppearance.BorderSize = 0;
         }
 
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+
+            if (loginForm.NewLogin())
+            {
+                this.Hide();
+                login newLoginForm = new login();
+                newLoginForm.Show();
+            }
+            else
+            {
+                this.Hide();
+                loginForm.Show();
+            }
+        }
     }
 }
