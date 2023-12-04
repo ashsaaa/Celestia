@@ -16,5 +16,11 @@ namespace HotelReservation_Ngo
         {
             InitializeComponent();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            addRoom addRoom = new addRoom();
+            addRoom.Show();
+        }
     }
 }

@@ -83,7 +83,7 @@
             panel3.Dock = DockStyle.Left;
             panel3.Location = new Point(0, 58);
             panel3.Name = "panel3";
-            panel3.Padding = new Padding(0, 0, 0, 40);
+            panel3.Padding = new Padding(0, 0, 0, 16);
             panel3.Size = new Size(293, 495);
             panel3.TabIndex = 1;
             // 
@@ -94,7 +94,7 @@
             btnLogout.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnLogout.Image = Properties.Resources.logout__2_;
             btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLogout.Location = new Point(0, 407);
+            btnLogout.Location = new Point(0, 431);
             btnLogout.Margin = new Padding(0);
             btnLogout.Name = "btnLogout";
             btnLogout.Padding = new Padding(24, 0, 0, 0);
@@ -194,10 +194,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             ClientSize = new Size(1060, 553);
             Controls.Add(viewPanel);
             Controls.Add(panel3);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "index";
             Text = "Index";
             panel1.ResumeLayout(false);
