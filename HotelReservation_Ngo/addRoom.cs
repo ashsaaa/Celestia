@@ -14,9 +14,12 @@ namespace HotelReservation_Ngo
     public partial class addRoom : Form
     {
         private string connectionString = "server=localhost;user=root;password=;database=celestia;";
-        public addRoom()
+        private rooms roomsFormInstance;
+
+        public addRoom(rooms RoomForm)
         {
             InitializeComponent();
+            roomsFormInstance = RoomForm;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,6 +67,7 @@ namespace HotelReservation_Ngo
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Data inserted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            roomsFormInstance.displayData();
                             this.Close();
                         }
                         else

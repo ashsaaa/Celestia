@@ -234,6 +234,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "rooms";
             Text = "rooms";
+            Load += rooms_Load;
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
