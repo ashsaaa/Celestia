@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySqlX.XDevAPI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,12 +14,23 @@ namespace HotelReservation_Ngo
     public partial class index : Form
     {
         private login loginForm;
+        private dashboard dashboardForm;
+        private rooms roomsForm;
+        private reserve reserveForm;
+        private clients clientForm;
 
         public index(login loginForm)
         {
             InitializeComponent();
             setcolor();
             this.loginForm = loginForm;
+
+            dashboardForm = new dashboard();
+            roomsForm = new rooms();
+            reserveForm = new reserve();
+            clientForm = new clients();
+
+            ShowFormInPanel(dashboardForm);
         }
 
         private void setcolor()
@@ -56,6 +68,54 @@ namespace HotelReservation_Ngo
                 this.Hide();
                 loginForm.Show();
             }
+        }
+
+        private void ShowFormInPanel(Form form)
+        {
+            viewPanel.Controls.Clear();
+
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+
+            viewPanel.Controls.Add(form);
+            form.Show();
+        }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            ShowFormInPanel(dashboardForm);
+            btn1.Font = new Font(btn1.Font, FontStyle.Bold);
+            btn2.Font = new Font(btn1.Font, FontStyle.Regular);
+            btn3.Font = new Font(btn1.Font, FontStyle.Regular);
+            btn4.Font = new Font(btn1.Font, FontStyle.Regular);
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            ShowFormInPanel(roomsForm);
+            btn1.Font = new Font(btn1.Font, FontStyle.Regular);
+            btn2.Font = new Font(btn1.Font, FontStyle.Bold);
+            btn3.Font = new Font(btn1.Font, FontStyle.Regular);
+            btn4.Font = new Font(btn1.Font, FontStyle.Regular);
+        }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            ShowFormInPanel(reserveForm);
+            btn1.Font = new Font(btn1.Font, FontStyle.Regular);
+            btn2.Font = new Font(btn1.Font, FontStyle.Regular);
+            btn3.Font = new Font(btn1.Font, FontStyle.Bold);
+            btn4.Font = new Font(btn1.Font, FontStyle.Regular);
+        }
+
+        private void btn4_Click(object sender, EventArgs e)
+        {
+            ShowFormInPanel(clientForm);
+            btn1.Font = new Font(btn1.Font, FontStyle.Regular);
+            btn2.Font = new Font(btn1.Font, FontStyle.Regular);
+            btn3.Font = new Font(btn1.Font, FontStyle.Regular);
+            btn4.Font = new Font(btn1.Font, FontStyle.Bold);
         }
     }
 }

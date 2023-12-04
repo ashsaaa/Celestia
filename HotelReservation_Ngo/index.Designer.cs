@@ -38,6 +38,7 @@
             btn3 = new Button();
             btn2 = new Button();
             btn1 = new Button();
+            viewPanel = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
@@ -90,7 +91,7 @@
             // 
             btnLogout.Dock = DockStyle.Bottom;
             btnLogout.FlatStyle = FlatStyle.Flat;
-            btnLogout.Font = new Font("Segoe UI Light", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLogout.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnLogout.Image = Properties.Resources.logout__2_;
             btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
             btnLogout.Location = new Point(0, 407);
@@ -109,7 +110,7 @@
             // 
             btn4.Dock = DockStyle.Top;
             btn4.FlatStyle = FlatStyle.Flat;
-            btn4.Font = new Font("Segoe UI Light", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btn4.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btn4.Image = Properties.Resources.rating;
             btn4.ImageAlign = ContentAlignment.MiddleLeft;
             btn4.Location = new Point(0, 144);
@@ -122,12 +123,13 @@
             btn4.TextAlign = ContentAlignment.MiddleLeft;
             btn4.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn4.UseVisualStyleBackColor = true;
+            btn4.Click += btn4_Click;
             // 
             // btn3
             // 
             btn3.Dock = DockStyle.Top;
             btn3.FlatStyle = FlatStyle.Flat;
-            btn3.Font = new Font("Segoe UI Light", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btn3.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btn3.Image = Properties.Resources.calendar;
             btn3.ImageAlign = ContentAlignment.MiddleLeft;
             btn3.Location = new Point(0, 96);
@@ -140,12 +142,13 @@
             btn3.TextAlign = ContentAlignment.MiddleLeft;
             btn3.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn3.UseVisualStyleBackColor = true;
+            btn3.Click += btn3_Click;
             // 
             // btn2
             // 
             btn2.Dock = DockStyle.Top;
             btn2.FlatStyle = FlatStyle.Flat;
-            btn2.Font = new Font("Segoe UI Light", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btn2.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btn2.Image = Properties.Resources.double_bed;
             btn2.ImageAlign = ContentAlignment.MiddleLeft;
             btn2.Location = new Point(0, 48);
@@ -158,12 +161,13 @@
             btn2.TextAlign = ContentAlignment.MiddleLeft;
             btn2.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn2.UseVisualStyleBackColor = true;
+            btn2.Click += btn2_Click;
             // 
             // btn1
             // 
             btn1.Dock = DockStyle.Top;
             btn1.FlatStyle = FlatStyle.Flat;
-            btn1.Font = new Font("Segoe UI Light", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btn1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btn1.Image = Properties.Resources.dashboard;
             btn1.ImageAlign = ContentAlignment.MiddleLeft;
             btn1.Location = new Point(0, 0);
@@ -176,12 +180,22 @@
             btn1.TextAlign = ContentAlignment.MiddleLeft;
             btn1.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn1.UseVisualStyleBackColor = true;
+            btn1.Click += btn1_Click;
+            // 
+            // viewPanel
+            // 
+            viewPanel.Dock = DockStyle.Fill;
+            viewPanel.Location = new Point(293, 58);
+            viewPanel.Name = "viewPanel";
+            viewPanel.Size = new Size(767, 495);
+            viewPanel.TabIndex = 2;
             // 
             // index
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1060, 553);
+            Controls.Add(viewPanel);
             Controls.Add(panel3);
             Controls.Add(panel1);
             Name = "index";
@@ -203,5 +217,6 @@
         private Button btn4;
         private Button btn3;
         private Button btn2;
+        private Panel viewPanel;
     }
 }
