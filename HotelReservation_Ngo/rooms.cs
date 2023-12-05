@@ -37,7 +37,7 @@ namespace HotelReservation_Ngo
             {
                 connection.Open();
 
-                string query = "SELECT rdetails.rid, rdetails.rname, rdetails.occupancy, rdetails.price, roomtype.rtypeid, bedtype.bedtype_id " +
+                string query = "SELECT rdetails.rid AS ID, rdetails.rname AS Name, rdetails.occupancy as Occupancy, rdetails.price as Price, roomtype.rtypeid as RoomType, bedtype.bedtype_id as BedType " +
                                "FROM rdetails " +
                                "INNER JOIN roomtype ON rdetails.rtypeid = roomtype.rtypeid " +
                                "INNER JOIN bedtype ON rdetails.btype_id = bedtype.bedtype_id";
