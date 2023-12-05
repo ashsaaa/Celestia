@@ -23,11 +23,11 @@ namespace HotelReservation_Ngo
 
         private void button4_Click(object sender, EventArgs e)
         {
-            addReserve addReserve = new addReserve();
+            addReserve addReserve = new addReserve(this);
             addReserve.Show();
         }
 
-        private void DisplayReservations()
+        public void DisplayReservations()
         {
             string query = @"SELECT reserve.id, CONCAT(client.c_lname, ', ', client.c_fname) AS ClientName, rdetails.rname AS RoomName, reserve.chIn AS CheckInDate, reserve.chOut AS CheckOutDate, reserve.Confirmation
                              FROM reserve

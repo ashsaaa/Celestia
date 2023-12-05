@@ -6,10 +6,11 @@ namespace HotelReservation_Ngo
     public partial class addReserve : Form
     {
         MySqlConnection connection = new MySqlConnection("server=localhost;user=root;password=;database=celestia;");
-
-        public addReserve()
+        private reserve ReserveInstance;
+        public addReserve(reserve Reserv)
         {
             InitializeComponent();
+            ReserveInstance = Reserv;
         }
 
         private void PopulateRType()
@@ -185,6 +186,7 @@ namespace HotelReservation_Ngo
                     {
                         MessageBox.Show("Reservation added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
+                        ReserveInstance.DisplayReservations();
                     }
                     else
                     {
