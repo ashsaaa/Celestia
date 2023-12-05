@@ -38,12 +38,8 @@
             textBox1 = new TextBox();
             panel11 = new Panel();
             button4 = new Button();
-            panel10 = new Panel();
-            button2 = new Button();
             panel9 = new Panel();
             button1 = new Button();
-            panel7 = new Panel();
-            button3 = new Button();
             panel8 = new Panel();
             dataGridView1 = new DataGridView();
             panel6.SuspendLayout();
@@ -106,12 +102,8 @@
             panel6.Controls.Add(textBox1);
             panel6.Controls.Add(panel11);
             panel6.Controls.Add(button4);
-            panel6.Controls.Add(panel10);
-            panel6.Controls.Add(button2);
             panel6.Controls.Add(panel9);
             panel6.Controls.Add(button1);
-            panel6.Controls.Add(panel7);
-            panel6.Controls.Add(button3);
             panel6.Dock = DockStyle.Top;
             panel6.Location = new Point(16, 48);
             panel6.Name = "panel6";
@@ -123,13 +115,13 @@
             textBox1.Dock = DockStyle.Bottom;
             textBox1.Location = new Point(0, 9);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(248, 23);
+            textBox1.Size = new Size(608, 23);
             textBox1.TabIndex = 14;
             // 
             // panel11
             // 
             panel11.Dock = DockStyle.Right;
-            panel11.Location = new Point(248, 0);
+            panel11.Location = new Point(608, 0);
             panel11.Name = "panel11";
             panel11.Size = new Size(32, 32);
             panel11.TabIndex = 13;
@@ -137,7 +129,7 @@
             // button4
             // 
             button4.Dock = DockStyle.Right;
-            button4.Location = new Point(280, 0);
+            button4.Location = new Point(640, 0);
             button4.Name = "button4";
             button4.Size = new Size(128, 32);
             button4.TabIndex = 12;
@@ -145,28 +137,10 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
-            // panel10
-            // 
-            panel10.Dock = DockStyle.Right;
-            panel10.Location = new Point(408, 0);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(32, 32);
-            panel10.TabIndex = 11;
-            // 
-            // button2
-            // 
-            button2.Dock = DockStyle.Right;
-            button2.Location = new Point(440, 0);
-            button2.Name = "button2";
-            button2.Size = new Size(148, 32);
-            button2.TabIndex = 10;
-            button2.Text = "view";
-            button2.UseVisualStyleBackColor = true;
-            // 
             // panel9
             // 
             panel9.Dock = DockStyle.Right;
-            panel9.Location = new Point(588, 0);
+            panel9.Location = new Point(768, 0);
             panel9.Name = "panel9";
             panel9.Size = new Size(32, 32);
             panel9.TabIndex = 9;
@@ -174,31 +148,13 @@
             // button1
             // 
             button1.Dock = DockStyle.Right;
-            button1.Location = new Point(620, 0);
+            button1.Location = new Point(800, 0);
             button1.Name = "button1";
             button1.Size = new Size(148, 32);
             button1.TabIndex = 8;
             button1.Text = "update";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
-            // 
-            // panel7
-            // 
-            panel7.Dock = DockStyle.Right;
-            panel7.Location = new Point(768, 0);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(32, 32);
-            panel7.TabIndex = 7;
-            // 
-            // button3
-            // 
-            button3.Dock = DockStyle.Right;
-            button3.Location = new Point(800, 0);
-            button3.Name = "button3";
-            button3.Size = new Size(148, 32);
-            button3.TabIndex = 6;
-            button3.Text = "delete";
-            button3.UseVisualStyleBackColor = true;
             // 
             // panel8
             // 
@@ -251,12 +207,8 @@
         private Panel panel4;
         private Panel panel5;
         private Panel panel6;
-        private Button button3;
-        private Panel panel10;
-        private Button button2;
         private Panel panel9;
         private Button button1;
-        private Panel panel7;
         private Panel panel8;
         private DataGridView dataGridView1;
         private TextBox textBox1;
