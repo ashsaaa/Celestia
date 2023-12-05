@@ -54,5 +54,9 @@ namespace HotelReservation_Ngo
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Function still not available. Sorry.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }
