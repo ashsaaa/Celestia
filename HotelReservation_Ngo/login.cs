@@ -86,24 +86,32 @@ namespace HotelReservation_Ngo
             string username = usertxt.Text;
             string password = passtxt.Text;
 
-            bool isAuthenticated = AuthenticateUser(username, password);
+            bool isUSERAuthenticated = AuthenticateUser(username, password);
+            bool isADMINauthenticad = AuthenticateAdmin(username, password);
 
-            if (isAuthenticated)
+            if (isADMINauthenticad)
             {
                 this.Hide();
-
+                Front_Desk_account_management FDAM = new Front_Desk_account_management();
+                FDAM.Show();
+                 
+            }
+            else if(isUSERAuthenticated)
+            {
+                this.Hide();
                 this.Hide();
 
                 index indexForm = new(this);
                 indexForm.WindowState = FormWindowState.Maximized;
                 indexForm.Show();
+
             }
             else
             {
-                MessageBox.Show("Invalid credentials. Please try again.");
+            MessageBox.Show("Invalid credentials. Please try again.");
             }
         }
-
+        
         private bool AuthenticateUser(string username, string password)
         {
             string connectionString = "server=localhost;user=root;password=;database=celestia;";
@@ -116,6 +124,34 @@ namespace HotelReservation_Ngo
 
                     // Check if the provided username and password match a record in the database
                     string query = "SELECT * FROM user WHERE username = @username AND password = @password";
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@password", password);
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        return reader.HasRows;
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                    return false;
+                }
+            }
+        }
+        private bool AuthenticateAdmin(string username, string password)
+        {
+            string connectionString = "server=localhost;user=root;password=;database=celestia;";
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    // Check if the provided username and password match a record in the database
+                    string query = "SELECT * FROM mainadmin WHERE username = @username AND password = @password";
                     MySqlCommand cmd = new MySqlCommand(query, connection);
                     cmd.Parameters.AddWithValue("@username", username);
                     cmd.Parameters.AddWithValue("@password", password);
