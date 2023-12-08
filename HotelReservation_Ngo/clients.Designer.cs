@@ -28,188 +28,268 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel5 = new Panel();
-            pictureBox1 = new PictureBox();
-            panel11 = new Panel();
-            panel10 = new Panel();
-            panel9 = new Panel();
-            label2 = new Label();
-            panel8 = new Panel();
-            label1 = new Label();
-            panel7 = new Panel();
-            panel6 = new Panel();
-            panel4 = new Panel();
-            panel3 = new Panel();
-            panel2 = new Panel();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            textBox3 = new TextBox();
+            textBox4 = new TextBox();
+            textBox5 = new TextBox();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            dataGridView1 = new DataGridView();
             panel1 = new Panel();
-            panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel2 = new Panel();
+            panel12 = new Panel();
+            panel13 = new Panel();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // panel5
+            // label3
             // 
-            panel5.Controls.Add(pictureBox1);
-            panel5.Controls.Add(panel11);
-            panel5.Controls.Add(panel10);
-            panel5.Controls.Add(panel9);
-            panel5.Controls.Add(label2);
-            panel5.Controls.Add(panel8);
-            panel5.Controls.Add(label1);
-            panel5.Controls.Add(panel7);
-            panel5.Controls.Add(panel6);
-            panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(250, 100);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(300, 150);
-            panel5.TabIndex = 9;
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(109, 123);
+            label3.Name = "label3";
+            label3.Size = new Size(35, 21);
+            label3.TabIndex = 1;
+            label3.Text = "CID";
             // 
-            // pictureBox1
+            // label4
             // 
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = Properties.Resources.folder;
-            pictureBox1.Location = new Point(176, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(0, 74);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 8;
-            pictureBox1.TabStop = false;
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(109, 161);
+            label4.Name = "label4";
+            label4.Size = new Size(86, 21);
+            label4.TabIndex = 2;
+            label4.Text = "First Name";
             // 
-            // panel11
+            // label5
             // 
-            panel11.Dock = DockStyle.Right;
-            panel11.Location = new Point(124, 0);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(128, 74);
-            panel11.TabIndex = 7;
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(109, 201);
+            label5.Name = "label5";
+            label5.Size = new Size(84, 21);
+            label5.TabIndex = 3;
+            label5.Text = "Last Name";
             // 
-            // panel10
+            // label6
             // 
-            panel10.Dock = DockStyle.Left;
-            panel10.Location = new Point(48, 0);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(128, 74);
-            panel10.TabIndex = 6;
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(108, 240);
+            label6.Name = "label6";
+            label6.Size = new Size(48, 21);
+            label6.TabIndex = 4;
+            label6.Text = "Email";
             // 
-            // panel9
+            // label7
             // 
-            panel9.Dock = DockStyle.Bottom;
-            panel9.Location = new Point(48, 74);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(204, 16);
-            panel9.TabIndex = 5;
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(109, 284);
+            label7.Name = "label7";
+            label7.Size = new Size(113, 21);
+            label7.TabIndex = 5;
+            label7.Text = "Phone number";
             // 
-            // label2
+            // textBox1
             // 
-            label2.Dock = DockStyle.Bottom;
-            label2.Font = new Font("Arial Narrow", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(48, 90);
-            label2.Name = "label2";
-            label2.Size = new Size(204, 29);
-            label2.TabIndex = 4;
-            label2.Text = "Page Unavailable";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Location = new Point(228, 120);
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(39, 29);
+            textBox1.TabIndex = 6;
             // 
-            // panel8
+            // textBox2
             // 
-            panel8.Dock = DockStyle.Bottom;
-            panel8.Location = new Point(48, 119);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(204, 8);
-            panel8.TabIndex = 3;
+            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.Location = new Point(228, 158);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(181, 29);
+            textBox2.TabIndex = 7;
             // 
-            // label1
+            // textBox3
             // 
-            label1.Dock = DockStyle.Bottom;
-            label1.Font = new Font("Arial Narrow", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ControlDarkDark;
-            label1.Location = new Point(48, 127);
-            label1.Name = "label1";
-            label1.Size = new Size(204, 23);
-            label1.TabIndex = 2;
-            label1.Text = "Contact your system administrator if the issue persists.";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox3.Location = new Point(228, 193);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(181, 29);
+            textBox3.TabIndex = 8;
             // 
-            // panel7
+            // textBox4
             // 
-            panel7.Dock = DockStyle.Right;
-            panel7.Location = new Point(252, 0);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(48, 150);
-            panel7.TabIndex = 1;
+            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox4.Location = new Point(228, 237);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(181, 29);
+            textBox4.TabIndex = 9;
+            textBox4.TextChanged += textBox4_TextChanged;
             // 
-            // panel6
+            // textBox5
             // 
-            panel6.Dock = DockStyle.Left;
-            panel6.Location = new Point(0, 0);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(48, 150);
-            panel6.TabIndex = 0;
+            textBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox5.Location = new Point(228, 276);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(181, 29);
+            textBox5.TabIndex = 10;
             // 
-            // panel4
+            // button1
             // 
-            panel4.Dock = DockStyle.Right;
-            panel4.Location = new Point(550, 100);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(250, 150);
-            panel4.TabIndex = 8;
+            button1.Location = new Point(87, 367);
+            button1.Name = "button1";
+            button1.Size = new Size(108, 41);
+            button1.TabIndex = 11;
+            button1.Text = "Add New Client";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // panel3
+            // button2
             // 
-            panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(250, 250);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(550, 200);
-            panel3.TabIndex = 7;
+            button2.Location = new Point(372, 367);
+            button2.Name = "button2";
+            button2.Size = new Size(106, 41);
+            button2.TabIndex = 12;
+            button2.Text = "Update";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
-            // panel2
+            // button3
             // 
-            panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(0, 100);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(250, 350);
-            panel2.TabIndex = 6;
+            button3.Location = new Point(228, 367);
+            button3.Name = "button3";
+            button3.Size = new Size(115, 41);
+            button3.TabIndex = 13;
+            button3.Text = "Delete";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(228, 448);
+            button4.Name = "button4";
+            button4.Size = new Size(115, 41);
+            button4.TabIndex = 14;
+            button4.Text = "Clear";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.Location = new Point(502, 85);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(671, 463);
+            dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // panel1
             // 
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 100);
-            panel1.TabIndex = 5;
+            panel1.Size = new Size(1259, 85);
+            panel1.TabIndex = 15;
+            // 
+            // panel2
+            // 
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 554);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1259, 46);
+            panel2.TabIndex = 16;
+            panel2.Paint += panel2_Paint;
+            // 
+            // panel12
+            // 
+            panel12.Dock = DockStyle.Right;
+            panel12.Location = new Point(1179, 85);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(80, 469);
+            panel12.TabIndex = 17;
+            // 
+            // panel13
+            // 
+            panel13.Dock = DockStyle.Left;
+            panel13.Location = new Point(0, 85);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(78, 469);
+            panel13.TabIndex = 18;
             // 
             // clients
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(panel5);
-            Controls.Add(panel4);
-            Controls.Add(panel3);
+            ClientSize = new Size(1259, 600);
+            Controls.Add(panel13);
+            Controls.Add(panel12);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(textBox5);
+            Controls.Add(textBox4);
+            Controls.Add(textBox3);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(dataGridView1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "clients";
             Text = "clients";
-            panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Load += clients_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
+        private Panel panel1;
+        private Panel panel2;
+        private Panel panel3;
+        private Panel panel4;
+        private Panel panel7;
+        private Panel panel8;
         private Panel panel5;
         private PictureBox pictureBox1;
         private Panel panel11;
         private Panel panel10;
         private Panel panel9;
         private Label label2;
-        private Panel panel8;
         private Label label1;
-        private Panel panel7;
         private Panel panel6;
-        private Panel panel4;
-        private Panel panel3;
-        private Panel panel2;
-        private Panel panel1;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private TextBox textBox3;
+        private TextBox textBox4;
+        private TextBox textBox5;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+        private DataGridView dataGridView1;
+        private Panel panel12;
+        private Panel panel13;
     }
 }
